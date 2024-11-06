@@ -8,10 +8,10 @@
 		<version>3.3.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>dev.danvega</groupId>
-	<artifactId>markets</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>portfolioapp</name>
+	<groupId>com.portfolioapp</groupId>
+	<artifactId>chatservice</artifactId>
+	<version>0.0.1</version>
+	<name>Portfolio Chat Service</name>
 	<description>Chat Service for Portfolio App</description>
 	<url/>
 	<licenses>
@@ -62,6 +62,11 @@
 			<artifactId>spring-ai-spring-boot-docker-compose</artifactId>
 			<scope>runtime</scope>
 			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>com.github.ulisesbocchio</groupId>
+			<artifactId>jasypt-spring-boot-starter</artifactId>
+			<version>3.0.4</version>
 		</dependency>
 	</dependencies>
 	<dependencyManagement>
