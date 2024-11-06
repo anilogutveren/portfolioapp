@@ -1,6 +1,5 @@
 package com.portfolioapp.chatservice.service;
 
-import org.jasypt.encryption.pbe.PooledPBEByteEncryptor;
 import org.jasypt.encryption.pbe.StandardPBEByteEncryptor;
 import org.jasypt.encryption.pbe.config.SimplePBEConfig;
 import org.jasypt.iv.RandomIvGenerator;
@@ -45,6 +44,7 @@ public class FileDecryptionService {
         try (FileOutputStream fos = new FileOutputStream(decryptedFilePath)) {
             fos.write(decryptedData);
         }
+
     }
 
 
@@ -68,6 +68,5 @@ public class FileDecryptionService {
             fos.write(encryptedData);
         }
 
-        System.out.println("Encryption complete. Encrypted file saved at: " + encryptedFilePath);
     }
 }
