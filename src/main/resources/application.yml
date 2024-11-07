@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: portfolioapp
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      chat:
+        options:
+          model: gpt-4o
+    vectorstore:
+      pgvector:
+        initialize-schema: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/portfolio
+    hikari:
+      username: user
+      password: password
+  docker:
+    compose:
+      lifecycle-management: start_only
+
+logging:
+  level:
+    org.apache.pdfbox.model.font.FileSystemFontProvider: ERROR
+
+jasypt:
+  encryptor:
+    password: ${SECRET}

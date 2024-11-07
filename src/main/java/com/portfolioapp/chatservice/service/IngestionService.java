@@ -39,8 +39,9 @@ public class IngestionService implements CommandLineRunner {
             TextSplitter textSplitter = new TokenTextSplitter();
             vectorStore.accept(textSplitter.apply(pdfReader.get()));
             log.info("VectorStore Loaded with data!");
+        } else {
+            log.error("File not found: {}", decryptedFilePath);
         }
-
 
     }
 }
