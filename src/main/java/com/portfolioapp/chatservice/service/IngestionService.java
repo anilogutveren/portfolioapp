@@ -42,6 +42,5 @@ public class IngestionService implements CommandLineRunner {
         } else {
             log.error("File not found: {}", decryptedFilePath);
         }
-
     }
 }
