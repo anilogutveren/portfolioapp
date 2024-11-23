@@ -10,7 +10,7 @@ phases:
       - mvn clean install
       - echo Logging in to Amazon ECR...
       - aws --version
-      - REPOSITORY_URI=188584303836.dkr.ecr.eu-central-1.amazonaws.com/question-service
+      - REPOSITORY_URI=108782067857.dkr.ecr.eu-central-1.amazonaws.com/portfolioinfrastack-repository-53m8yoy9zrzm:latest
       - aws ecr get-login-password --region eu-central-1 | docker login --username AWS --password-stdin $REPOSITORY_URI
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
@@ -39,4 +39,4 @@ phases:
 artifacts:
   files:
     - imagedefinitions.json
-    - target/portfolioapp.jar
+    - target/chatservice-*.jar

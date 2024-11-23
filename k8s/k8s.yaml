@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: myapp
-          image: 188584303836.dkr.ecr.eu-central-1.amazonaws.com/question-service:latest
+          image: 108782067857.dkr.ecr.eu-central-1.amazonaws.com/portfolioinfrastack-repository-53m8yoy9zrzm:latest
           ports:
             - containerPort: 8080
 
