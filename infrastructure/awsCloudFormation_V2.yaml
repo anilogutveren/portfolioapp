@@ -92,10 +92,10 @@ Resources:
         - 'arn:aws:iam::aws:policy/AmazonEKSServicePolicy'
 
   # EKS Cluster
-  MyEKSCluster:
+  PortfolioEKSCluster:
     Type: 'AWS::EKS::Cluster'
     Properties:
-      Name: 'MyEKSCluster'
+      Name: 'PortfolioEKSCluster'
       RoleArn: !GetAtt EKSClusterRole.Arn
       ResourcesVpcConfig:
         SubnetIds:
@@ -285,7 +285,7 @@ Resources:
 
 Outputs:
   EKSClusterName:
-    Value: !Ref MyEKSCluster
+    Value: !Ref PortfolioEKSCluster
     Description: Name of the EKS Cluster
 
   ALBEndpoint:
