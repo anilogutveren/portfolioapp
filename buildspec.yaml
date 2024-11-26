@@ -19,7 +19,7 @@ phases:
       - echo Build started on `date`
       - echo Building the Docker image...
       - docker build -t portfolioapp:latest .
-      - docker tag portfolioapp:latest 108782067857.dkr.ecr.eu-central-1.amazonaws.com/portfolioapp:latest:latest
+      - docker tag portfolioapp:latest 108782067857.dkr.ecr.eu-central-1.amazonaws.com/portfolioapp:latest
   post_build:
     commands:
       - echo Build completed on `date`
